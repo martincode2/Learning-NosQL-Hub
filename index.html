@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoSQL Database Development - Learning Hub</title>
+    <title>NoSQL Learning Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -598,48 +598,6 @@
             padding-left: 20px;
             border-left: 3px solid var(--primary);
         }
-        
-        .note-box {
-            background: #fff8e1;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #ffc107;
-        }
-        
-        .note-box h4 {
-            color: #ff9800;
-            display: flex;
-            align-items: center;
-        }
-        
-        .note-box h4 i {
-            margin-right: 10px;
-        }
-        
-        .download-btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            margin: 10px 0;
-        }
-        
-        .download-btn:hover {
-            background: var(--secondary);
-            transform: translateY(-2px);
-        }
-        
-        .btn-group {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin: 20px 0;
-        }
     </style>
 </head>
 <body>
@@ -649,8 +607,8 @@
                 <div class="logo">
                     <i class="fas fa-database"></i>
                     <div class="logo-text">
-                        <h1>NoSQL Database Development</h1>
-                        <p>Learning Outcome 1 - Prepare Database Environment</p>
+                        <h1>NoSQL Learning Hub</h1>
+                        <p>Your comprehensive guide to NoSQL databases</p>
                     </div>
                 </div>
                 <div class="search-box">
@@ -663,8 +621,13 @@
         <nav>
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active" data-target="overview">
-                        <i class="fas fa-home"></i> Overview
+                    <a href="#" class="nav-link active" data-target="intro">
+                        <i class="fas fa-home"></i> Introduction
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-target="types">
+                        <i class="fas fa-layer-group"></i> Database Types
                     </a>
                 </li>
                 <li class="nav-item">
@@ -673,23 +636,28 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-target="types">
-                        <i class="fas fa-layer-group"></i> DB Types
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="#" class="nav-link" data-target="setup">
                         <i class="fas fa-cogs"></i> Environment Setup
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-target="applications">
-                        <i class="fas fa-code"></i> Applications
+                    <a href="#" class="nav-link" data-target="examples">
+                        <i class="fas fa-code"></i> Examples
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-target="resources">
-                        <i class="fas fa-book"></i> Resources
+                    <a href="#" class="nav-link" data-target="comparison">
+                        <i class="fas fa-balance-scale"></i> Comparison
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-target="quiz">
+                        <i class="fas fa-question-circle"></i> Quiz
+                    </a>
+                </li>
+                 <li class="nav-item">
+                    <a href="/more.html" class="nav-link" data-target="quiz">
+                        <i class="fas fa-question-circle"></i> More
                     </a>
                 </li>
             </ul>
@@ -699,37 +667,27 @@
             <div class="progress" id="progress"></div>
         </div>
         
-        <div class="content-section active" id="overview">
-            <h2>Overview</h2>
+        <div class="content-section active" id="intro">
+            <h2>Introduction to NoSQL Databases</h2>
             
             <div class="card">
-                <h3>Learning Outcome 1: Prepare Database Environment</h3>
-                <p><strong>Duration:</strong> 10 hours</p>
+                <h3>What is NoSQL?</h3>
+                <p>NoSQL (Not Only SQL) refers to a class of databases that go beyond the traditional relational database model. They are designed to handle large volumes of unstructured data and are optimized for distributed systems.</p>
                 
-                <h4>Learning Objectives:</h4>
-                <p>By the end of this learning outcome, trainees will be able to:</p>
-                <ol class="setup-steps">
-                    <li>Describe database requirements based on user requirements</li>
-                    <li>Describe the requirement analysis process based on database requirements</li>
-                    <li>Properly setup database environment based on established standards</li>
-                    <li>Define and create use cases based on database requirements</li>
-                    <li>Identify components of use cases based on database requirements</li>
-                </ol>
+                <p>NoSQL databases emerged in the late 2000s as web companies faced challenges in handling the massive amounts of data generated by their users. Unlike relational databases, NoSQL databases don't require a fixed schema, and they can scale horizontally across many servers.</p>
             </div>
             
-            <div class="note-box">
-                <h4><i class="fas fa-info-circle"></i> About This Resource</h4>
-                <p>This interactive learning hub contains all the content from your NoSQL Database Development notes, organized into an easily navigable format. You can use the navigation menu above to explore different sections.</p>
+            <div class="card">
+                <h3>Why NoSQL?</h3>
+                <p>NoSQL databases offer several advantages over traditional relational databases:</p>
+                
+                <ul>
+                    <li><strong>Scalability:</strong> NoSQL databases are designed to scale out by distributing data across many servers</li>
+                    <li><strong>Flexibility:</strong> NoSQL databases typically have flexible schemas that can evolve as needs change</li>
+                    <li><strong>Performance:</strong> NoSQL databases are optimized for specific data models and access patterns</li>
+                    <li><strong>High Availability:</strong> Many NoSQL databases are designed for high availability with no single point of failure</li>
+                </ul>
             </div>
-            
-            <div class="btn-group">
-                <a href="#" class="download-btn"><i class="fas fa-download"></i> Download Original Notes</a>
-                <a href="#" class="download-btn"><i class="fas fa-print"></i> Print This Guide</a>
-            </div>
-        </div>
-        
-        <div class="content-section" id="requirements">
-            <h2>1.1 Identifying Database Requirements</h2>
             
             <div class="key-terms">
                 <h3>Key Terms and Definitions</h3>
@@ -760,87 +718,26 @@
                 </div>
             </div>
             
-            <div class="card">
-                <h3>SQL vs NoSQL Comparison</h3>
-                
-                <table class="comparison-table">
-                    <tr>
-                        <th>Feature</th>
-                        <th>SQL</th>
-                        <th>NoSQL</th>
-                    </tr>
-                    <tr>
-                        <td>Type</td>
-                        <td>Structured Query Language</td>
-                        <td>Not Only SQL</td>
-                    </tr>
-                    <tr>
-                        <td>Data Model</td>
-                        <td>Relational database (RDBMS)</td>
-                        <td>Non-relational database</td>
-                    </tr>
-                    <tr>
-                        <td>Schema</td>
-                        <td>Structured data with predefined schema</td>
-                        <td>Unstructured/semi-structured data</td>
-                    </tr>
-                    <tr>
-                        <td>Data Storage</td>
-                        <td>Data stored in tables (rows/columns)</td>
-                        <td>Data stored in collections of documents</td>
-                    </tr>
-                    <tr>
-                        <td>ACID Properties</td>
-                        <td>Follows ACID properties</td>
-                        <td>May not follow ACID properties</td>
-                    </tr>
-                    <tr>
-                        <td>Query Support</td>
-                        <td>Supports joins and complex queries</td>
-                        <td>Uses denormalized data structures</td>
-                    </tr>
-                    <tr>
-                        <td>Scaling</td>
-                        <td>Vertical scaling</td>
-                        <td>Horizontal scaling</td>
-                    </tr>
-                    <tr>
-                        <td>Examples</td>
-                        <td>MySQL, PostgreSQL, Oracle</td>
-                        <td>MongoDB, Cassandra, Redis</td>
-                    </tr>
-                </table>
-            </div>
-            
-            <div class="card">
-                <h3>NoSQL Database Benefits</h3>
-                
-                <div class="icon-grid">
-                    <div class="icon-item">
-                        <i class="fas fa-expand-arrows-alt"></i>
-                        <h4>Scalability</h4>
-                        <p>Horizontal scaling across distributed hardware</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <h4>High Performance</h4>
-                        <p>Optimized for specific data models</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="fas fa-rocket"></i>
-                        <h4>Ease of Development</h4>
-                        <p>Flexible schemas enable faster development</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="fas fa-dollar-sign"></i>
-                        <h4>Cost-effectiveness</h4>
-                        <p>Accommodates changing requirements</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="fas fa-database"></i>
-                        <h4>Data Handling</h4>
-                        <p>Manages large volumes and various data formats</p>
-                    </div>
+            <div class="icon-grid">
+                <div class="icon-item">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <h4>Scalability</h4>
+                    <p>Horizontal scaling across distributed servers</p>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <h4>Flexibility</h4>
+                    <p>Dynamic schemas for evolving data needs</p>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h4>Performance</h4>
+                    <p>Optimized for specific data patterns</p>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-server"></i>
+                    <h4>Availability</h4>
+                    <p>Built-in replication and fault tolerance</p>
                 </div>
             </div>
         </div>
@@ -850,36 +747,59 @@
             
             <div class="db-types">
                 <div class="db-type db-type-document">
-                    <h4><i class="fas fa-file-alt"></i> Document-Oriented Databases</h4>
-                    <p>Store data as documents (JSON/BSON format) in collections.</p>
-                    <p><strong>Strengths:</strong> Flexible schema, supports nested structures, great for semi-structured data.</p>
-                    <p><strong>Examples:</strong> MongoDB, CouchDB, RavenDB.</p>
-                    <p><strong>Use case:</strong> E-commerce catalogs, content management, user profiles.</p>
+                    <h4><i class="fas fa-file-alt"></i> Document Databases</h4>
+                    <p>Store data as documents (JSON/BSON format) in collections. Ideal for content management, user profiles, and catalogs.</p>
+                    <div class="example">
+                        <div class="example-header">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <h4>MongoDB</h4>
+                                <p>Popular document database used by eBay, Forbes, and Adobe</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="db-type db-type-keyvalue">
                     <h4><i class="fas fa-key"></i> Key-Value Stores</h4>
-                    <p>Store data as key → value pairs.</p>
-                    <p><strong>Strengths:</strong> Very fast read/write, excellent for caching.</p>
-                    <p><strong>Examples:</strong> Redis, Amazon DynamoDB, Riak.</p>
-                    <p><strong>Use case:</strong> User sessions, shopping carts, leaderboards.</p>
+                    <p>Simple key-value pairs. Extremely fast, perfect for caching, session storage, and leaderboards.</p>
+                    <div class="example">
+                        <div class="example-header">
+                            <i class="fas fa-key"></i>
+                            <div>
+                                <h4>Redis</h4>
+                                <p>In-memory key-value store used by Twitter, GitHub, and Snapchat</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="db-type db-type-column">
-                    <h4><i class="fas fa-columns"></i> Column-Family Databases</h4>
-                    <p>Store data in rows and columns, grouped into column families.</p>
-                    <p><strong>Origin:</strong> Developed at Facebook and later open-sourced in 2008.</p>
-                    <p><strong>Purpose:</strong> Designed for massive, distributed datasets with high availability and fault tolerance.</p>
-                    <p><strong>Examples:</strong> Apache Cassandra, HBase.</p>
-                    <p><strong>Use case:</strong> IoT data, analytics, time-series data, real-time logging.</p>
+                    <h4><i class="fas fa-columns"></i> Column-Family Stores</h4>
+                    <p>Store data in columns rather than rows. Optimized for queries over large datasets and write-heavy workloads.</p>
+                    <div class="example">
+                        <div class="example-header">
+                            <i class="fas fa-database"></i>
+                            <div>
+                                <h4>Cassandra</h4>
+                                <p>Distributed column-family database used by Netflix, Instagram, and Spotify</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="db-type db-type-graph">
                     <h4><i class="fas fa-project-diagram"></i> Graph Databases</h4>
-                    <p>Store data as nodes (entities) and edges (relationships).</p>
-                    <p><strong>Strengths:</strong> Best for relationship-heavy data.</p>
-                    <p><strong>Examples:</strong> Neo4j, Amazon Neptune, ArangoDB.</p>
-                    <p><strong>Use case:</strong> Social networks, recommendation systems, fraud detection.</p>
+                    <p>Store data as nodes and relationships. Perfect for social networks, recommendation engines, and fraud detection.</p>
+                    <div class="example">
+                        <div class="example-header">
+                            <i class="fas fa-share-alt"></i>
+                            <div>
+                                <h4>Neo4j</h4>
+                                <p>Graph database used by NASA, Walmart, and Cisco</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -990,8 +910,93 @@
             </div>
         </div>
         
+        <div class="content-section" id="requirements">
+            <h2>Database Requirements and Analysis</h2>
+            
+            <div class="card">
+                <h3>Identifying Database Requirements</h3>
+                <p>Database requirements are derived from user requirements and form the foundation for database design and implementation.</p>
+                
+                <h4>Key Methods for Requirement Identification:</h4>
+                <ul class="requirements-list">
+                    <li><strong>User Research:</strong> Interviews, surveys, observations, focus groups</li>
+                    <li><strong>Personas:</strong> Detailed fictional characters representing target users</li>
+                    <li><strong>User Stories:</strong> Requirements in narrative format (INVEST criteria)</li>
+                    <li><strong>Requirements Gathering:</strong> Brainstorming, prototyping, wireframing, mockups</li>
+                    <li><strong>User Testing:</strong> Usability testing, feedback gathering, iteration</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>Use Cases Definition</h3>
+                
+                <h4>Key Components of Use Cases:</h4>
+                <ul class="requirements-list">
+                    <li><strong>Actor:</strong> Person or entity interacting with system</li>
+                    <li><strong>Goal:</strong> Objective the actor wants to achieve</li>
+                    <li><strong>Precondition:</strong> Required conditions before use case begins</li>
+                    <li><strong>Post condition:</strong> Expected conditions after completion</li>
+                    <li><strong>Flow of events:</strong> Step-by-step interaction description</li>
+                </ul>
+                
+                <h4>Steps for Defining Use Cases:</h4>
+                <ol class="setup-steps">
+                    <li>Identify actors</li>
+                    <li>Identify goals</li>
+                    <li>Create use cases</li>
+                    <li>Write detailed descriptions</li>
+                    <li>Refine and prioritize</li>
+                </ol>
+            </div>
+            
+            <div class="card">
+                <h3>Requirements Analysis Process</h3>
+                <p><strong>Definition:</strong> Critical phase in software development involving identifying, documenting, and validating specific system needs.</p>
+                
+                <h4>Key Steps:</h4>
+                <ol class="setup-steps">
+                    <li><strong>Identify Key Stakeholders and End-Users:</strong> Determine all involved parties, consider different perspectives, understand needs, goals, expectations, constraints</li>
+                    <li><strong>Capture Requirements:</strong> Use various techniques: interviews, surveys, workshops. Employ tools: mind maps, user stories, use cases. Utilize visual representation methods.</li>
+                    <li><strong>Categorize Requirements:</strong> Group similar requirements, prioritize based on importance and impact, consider constraints (budget, timeline, technical limitations)</li>
+                    <li><strong>Interpret and Record Requirements:</strong> Document requirements clearly and concisely, use consistent format and standardized templates, define all terms and acronyms</li>
+                    <li><strong>Validate Requirements:</strong> Review with stakeholders, address concerns and incorporate feedback, conduct feasibility studies, use traceability matrix and walkthroughs</li>
+                </ol>
+            </div>
+            
+            <div class="card">
+                <h3>Data Analysis Process</h3>
+                
+                <h4>Steps for Performing Data Analysis:</h4>
+                <ol class="setup-steps">
+                    <li><strong>Define the Problem and Research Question:</strong> Focus on business value-driven analysis, avoid unnecessary data collection</li>
+                    <li><strong>Collecting Data:</strong> First-party data (from customers/audiences on owned channels), second-party data (shared between organizations), third-party data (purchased from external sources)</li>
+                    <li><strong>Preparing Customer Data:</strong> Remove errors and duplicates, fill missing data, structure for easier manipulation, remove irrelevant data</li>
+                    <li><strong>Analyzing the Data:</strong> Descriptive analysis (past events and patterns), diagnostic analysis (root cause understanding), predictive analysis (future trends forecasting), prescriptive analysis (recommendations for actions)</li>
+                    <li><strong>Interpret the Results:</strong> Clarify research questions, draw meaningful conclusions</li>
+                </ol>
+            </div>
+            
+            <div class="card">
+                <h3>Data Validation Implementation</h3>
+                
+                <h4>Validation Steps:</h4>
+                <ul class="requirements-list">
+                    <li><strong>Range Checking:</strong> Verify values within predefined limits</li>
+                    <li><strong>Format Checking:</strong> Validate specific formats (email, dates, phone numbers)</li>
+                    <li><strong>Consistency Checking:</strong> Ensure related data values are consistent</li>
+                    <li><strong>Completeness Checking:</strong> Verify all required fields are filled</li>
+                    <li><strong>Uniqueness Checking:</strong> Ensure certain fields have unique values</li>
+                    <li><strong>Cross-Validation:</strong> Compare data from multiple sources</li>
+                    <li><strong>Business Rule Validation:</strong> Check adherence to predefined rules</li>
+                    <li><strong>Regular Expression Validation:</strong> Use patterns for specific validations</li>
+                    <li><strong>Data Type Validation:</strong> Verify correct data types</li>
+                    <li><strong>Data Quality Checks:</strong> Evaluate accuracy, completeness, consistency, timeliness</li>
+                </ul>
+            </div>
+        </div>
+        
         <div class="content-section" id="setup">
-            <h2>1.3 Preparing Database Environment</h2>
+            <h2>Preparing Database Environment</h2>
             
             <div class="card">
                 <h3>MongoDB Scalability Factors</h3>
@@ -1066,10 +1071,86 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="card">
+                <h3>Database Environment Setup Steps</h3>
+                
+                <h4>General Process:</h4>
+                <ol class="setup-steps">
+                    <li><strong>Choose a NoSQL Database:</strong> Evaluate needs (scalability, performance, consistency), research options (MongoDB, Cassandra, Redis)</li>
+                    <li><strong>Install and Configure the Database:</strong> Download and install following vendor instructions, configure settings (storage, memory, network)</li>
+                    <li><strong>Create Database and Collections:</strong> Database: Logical container for data, Collections: Groups of related documents</li>
+                    <li><strong>Connect to the Database:</strong> Use appropriate driver for programming language, establish connection with connection string</li>
+                </ol>
+            </div>
         </div>
         
-        <div class="content-section" id="applications">
-            <h2>Applications and Use Cases</h2>
+        <div class="content-section" id="examples">
+            <h2>Real-World Examples and Use Cases</h2>
+            
+            <div class="card card-document">
+                <h3><i class="fas fa-leaf"></i> MongoDB at eBay</h3>
+                <p>eBay uses MongoDB for numerous projects including search suggestions, metadata storage, and cloud management. MongoDB's flexible data model allows eBay to handle diverse data types and evolve their applications quickly.</p>
+                
+                <div class="code-example">
+                    // Example of product data in eBay's MongoDB<br>
+                    {<br>
+                    &nbsp; _id: ObjectId("5f9d9b9d9c9b9a9b9c9d9e9f"),<br>
+                    &nbsp; product_id: "123456789",<br>
+                    &nbsp; title: "Vintage Coffee Maker",<br>
+                    &nbsp; price: { value: 49.99, currency: "USD" },<br>
+                    &nbsp; seller: { id: "seller123", rating: 4.8 },<br>
+                    &nbsp; tags: ["vintage", "kitchen", "coffee"],<br>
+                    &nbsp; created_at: ISODate("2023-10-27T10:00:00Z")<br>
+                    }
+                </div>
+            </div>
+            
+            <div class="card card-keyvalue">
+                <h3><i class="fas fa-key"></i> Redis at Twitter</h3>
+                <p>Twitter uses Redis to cache timelines and support real-time delivery of tweets. Redis's in-memory nature provides extremely fast read and write operations, essential for real-time social media feeds.</p>
+                
+                <div class="code-example">
+                    // Example of timeline data in Twitter's Redis<br>
+                    HSET timeline:user123 tweet:789 "Hello world!"<br>
+                    HSET timeline:user123 tweet:790 "Having a great day!"<br>
+                    HGETALL timeline:user123<br>
+                    > 1) "tweet:789"<br>
+                    > 2) "Hello world!"<br>
+                    > 3) "tweet:790"<br>
+                    > 4) "Having a great day!"
+                </div>
+            </div>
+            
+            <div class="card card-column">
+                <h3><i class="fas fa-database"></i> Cassandra at Netflix</h3>
+                <p>Netflix uses Cassandra for its scalability and fault-tolerance, storing user viewing data and recommendations. Cassandra provides high availability with no single point of failure, crucial for Netflix's global streaming service.</p>
+                
+                <div class="code-example">
+                    -- Example of user data in Netflix's Cassandra<br>
+                    CREATE TABLE user_watch_history (<br>
+                    &nbsp; user_id UUID,<br>
+                    &nbsp; movie_id UUID,<br>
+                    &nbsp; watch_time TIMESTAMP,<br>
+                    &nbsp; progress INT,<br>
+                    &nbsp; rating INT,<br>
+                    &nbsp; PRIMARY KEY (user_id, watch_time)<br>
+                    ) WITH CLUSTERING ORDER BY (watch_time DESC);
+                </div>
+            </div>
+            
+            <div class="card card-graph">
+                <h3><i class="fas fa-share-alt"></i> Neo4j at NASA</h3>
+                <p>NASA uses Neo4j to store and analyze data about the International Space Station. The graph database helps model complex relationships between astronauts, experiments, equipment, and spacewalks.</p>
+                
+                <div class="code-example">
+                    // Example of data relationships in NASA's Neo4j<br>
+                    MATCH (astronaut:Astronaut)-[:PARTICIPATED_IN]-><br>
+                    (experiment:Experiment)<-[:USED_IN]-(equipment:Equipment)<br>
+                    WHERE experiment.name = "Microgravity Plant Growth"<br>
+                    RETURN astronaut.name, equipment.type;
+                </div>
+            </div>
             
             <div class="card">
                 <h3>NoSQL Database Applications</h3>
@@ -1130,58 +1211,136 @@
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <div class="content-section" id="comparison">
+            <h2>NoSQL vs SQL Comparison</h2>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>SQL Databases</th>
+                    <th>NoSQL Databases</th>
+                </tr>
+                <tr>
+                    <td>Data Model</td>
+                    <td>Relational (Tables)</td>
+                    <td>Non-relational (Documents, Key-Value, etc.)</td>
+                </tr>
+                <tr>
+                    <td>Schema</td>
+                    <td>Fixed, predefined</td>
+                    <td>Flexible, dynamic</td>
+                </tr>
+                <tr>
+                    <td>Scaling</td>
+                    <td>Vertical (hardware upgrade)</td>
+                    <td>Horizontal (adding more servers)</td>
+                </tr>
+                <tr>
+                    <td>ACID Compliance</td>
+                    <td>Yes</td>
+                    <td>Often relaxed (BASE model)</td>
+                </tr>
+                <tr>
+                    <td>Use Cases</td>
+                    <td>Complex queries, transactions</td>
+                    <td>Big data, real-time apps</td>
+                </tr>
+                <tr>
+                    <td>Examples</td>
+                    <td>MySQL, PostgreSQL, Oracle</td>
+                    <td>MongoDB, Cassandra, Redis</td>
+                </tr>
+            </table>
+            
+            <h3>When to Use NoSQL</h3>
             
             <div class="card">
-                <h3>Example Use Cases</h3>
-                
-                <div class="example">
-                    <div class="example-header">
-                        <i class="fas fa-shopping-cart"></i>
-                        <div>
-                            <h4>E-commerce Platforms</h4>
-                            <p>Dynamic product catalogs, customer profiles</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="example">
-                    <div class="example-header">
-                        <i class="fas fa-thumbs-up"></i>
-                        <div>
-                            <h4>Social Media Networks</h4>
-                            <p>User sessions, likes, comments, follower relationships</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="example">
-                    <div class="example-header">
-                        <i class="fas fa-sensor"></i>
-                        <div>
-                            <h4>IoT Data Management</h4>
-                            <p>Sensor data collection and real-time analysis</p>
-                        </div>
-                    </div>
-                </div>
+                <p>Consider using a NoSQL database when:</p>
+                <ul>
+                    <li>You need to scale horizontally</li>
+                    <li>Your data schema is fluid or changing</li>
+                    <li>You're dealing with large volumes of data</li>
+                    <li>Your application requires high availability</li>
+                    <li>Your data is unstructured or semi-structured</li>
+                    <li>You need high throughput for read and write operations</li>
+                </ul>
+            </div>
+            
+            <h3>When to Use SQL</h3>
+            
+            <div class="card">
+                <p>Consider using a SQL database when:</p>
+                <ul>
+                    <li>You need ACID compliance for transactions</li>
+                    <li>Your data structure is stable and well-defined</li>
+                    <li>You need complex queries and joins</li>
+                    <li>You have relational data with integrity constraints</li>
+                    <li>Your team has more experience with relational databases</li>
+                </ul>
             </div>
         </div>
         
-        <div class="content-section" id="resources">
-            <h2>Learning Resources</h2>
+        <div class="content-section" id="quiz">
+            <h2>Test Your Knowledge</h2>
             
-            <div class="card">
-                <h3>Download Resources</h3>
-                <p>Access the original notes and additional learning materials:</p>
-                
-                <div class="btn-group">
-                    <a href="#" class="download-btn"><i class="fas fa-file-word"></i> Download DOCX Notes</a>
-                    <a href="#" class="download-btn"><i class="fas fa-file-pdf"></i> Download PDF Version</a>
-                    <a href="#" class="download-btn"><i class="fas fa-file-alt"></i> Cheat Sheet</a>
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <h3>Question 1: What does NoSQL stand for?</h3>
+                    <ul class="quiz-options">
+                        <li class="quiz-option">A) Not Standard Query Language</li>
+                        <li class="quiz-option">B) New Object Search Query Language</li>
+                        <li class="quiz-option">C) Not Only SQL</li>
+                        <li class="quiz-option">D) Non Sequential Query Language</li>
+                    </ul>
                 </div>
+                
+                <div class="quiz-question">
+                    <h3>Question 2: Which type of NoSQL database is best suited for storing user session data?</h3>
+                    <ul class="quiz-options">
+                        <li class="quiz-option">A) Document Database</li>
+                        <li class="quiz-option">B) Column-Family Store</li>
+                        <li class="quiz-option">C) Graph Database</li>
+                        <li class="quiz-option">D) Key-Value Store</li>
+                    </ul>
+                </div>
+                
+                <div class="quiz-question">
+                    <h3>Question 3: Which company developed Apache Cassandra?</h3>
+                    <ul class="quiz-options">
+                        <li class="quiz-option">A) Google</li>
+                        <li class="quiz-option">B) Amazon</li>
+                        <li class="quiz-option">C) Facebook</li>
+                        <li class="quiz-option">D) Microsoft</li>
+                    </ul>
+                </div>
+                
+                <div class="quiz-question">
+                    <h3>Question 4: Which of these is a key component of use cases?</h3>
+                    <ul class="quiz-options">
+                        <li class="quiz-option">A) Actor</li>
+                        <li class="quiz-option">B) Director</li>
+                        <li class="quiz-option">C) Producer</li>
+                        <li class="quiz-option">D) Editor</li>
+                    </ul>
+                </div>
+                
+                <div class="quiz-question">
+                    <h3>Question 5: What does BSON stand for?</h3>
+                    <ul class="quiz-options">
+                        <li class="quiz-option">A) Basic Serialized Object Notation</li>
+                        <li class="quiz-option">B) Binary Structured Object Notation</li>
+                        <li class="quiz-option">C) Binary JSON</li>
+                        <li class="quiz-option">D) Basic JSON</li>
+                    </ul>
+                </div>
+                
+                <button class="quiz-submit">Submit Answers</button>
             </div>
             
             <div class="card">
-                <h3>Additional References</h3>
+                <h3>Learning Resources</h3>
                 <p>Expand your knowledge with these recommended resources:</p>
                 
                 <ul>
@@ -1192,40 +1351,12 @@
                     <li><a href="#">NoSQL Database Design - O'Reilly Book</a></li>
                 </ul>
             </div>
-            
-            <div class="card">
-                <h3>Interactive Quiz</h3>
-                <p>Test your knowledge of NoSQL concepts:</p>
-                
-                <div class="quiz-container">
-                    <div class="quiz-question">
-                        <h4>Question 1: What does NoSQL stand for?</h4>
-                        <ul class="quiz-options">
-                            <li class="quiz-option">A) Not Standard Query Language</li>
-                            <li class="quiz-option">B) New Object Search Query Language</li>
-                            <li class="quiz-option">C) Not Only SQL</li>
-                            <li class="quiz-option">D) Non Sequential Query Language</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="quiz-question">
-                        <h4>Question 2: Which type of NoSQL database is best suited for storing user session data?</h4>
-                        <ul class="quiz-options">
-                            <li class="quiz-option">A) Document Database</li>
-                            <li class="quiz-option">B) Column-Family Store</li>
-                            <li class="quiz-option">C) Graph Database</li>
-                            <li class="quiz-option">D) Key-Value Store</li>
-                        </ul>
-                    </div>
-                    
-                    <button class="quiz-submit">Submit Answers</button>
-                </div>
-            </div>
         </div>
         
         <footer>
-            <p>NoSQL Database Development - Learning Outcome 1 Summary</p>
-            <p>© 2023 | Prepared for educational purposes</p>
+            <p>NoSQL Learning Hub - Comprehensive Educational Resource</p>
+            <p>© 2025 Crafted by Martin
+All rights reserved</p>
         </footer>
     </div>
 
@@ -1321,14 +1452,6 @@
             if (e.key === 'Enter') {
                 document.querySelector('.search-btn').click();
             }
-        });
-        
-        // Download button functionality
-        document.querySelectorAll('.download-btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                alert('In a real application, this would download the requested resource.');
-            });
         });
     </script>
 </body>
